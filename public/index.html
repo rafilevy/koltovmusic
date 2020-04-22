@@ -10,31 +10,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
     <script src="https://use.fontawesome.com/b3aad96775.js"></script>
-
-    <script>
-        async function handleSubmit() {
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
-            let message = document.getElementById("message").value;
-            if (!name || !email || !message) return document.getElementById("contactForm").submit();
-            try {                
-                const response = await fetch("/contact" , {
-                    method: "POST",
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({name, email, message})
-                });
-                if (!response.ok) throw new Error()
-                document.getElementById("name").value = "";
-                document.getElementById("email").value = "";
-                document.getElementById("message").value = "";
-            } catch {
-                alert("An error occured, please try again later.")
-            }
-        }
-    </script>
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kol Tov</title>
 </head>
@@ -77,7 +52,7 @@
                     wherever we go – <b>that you can take something you love and use it to make the world a better place.</b>
                 </p>
                 <p>
-                    Get in touch or scroll down to find out more
+                    Scroll down to find out more
                 </p>
                 <a href="#section-6" class="call-to-action"><i class="fa fa-envelope" aria-hidden="true"></i><div>Contact Us</div></a>
             </div>
@@ -87,6 +62,7 @@
                         <div class="padded">
                             <h1>We offer a range of services to enhance your simcha</h1>
                             <p>Our unique combination of youthful energy and wide-ranging experience has brought to life countless Simchas and other events. From our atmospheric Shabbat melodies to our awesome a cappella arrangements, we bring our mission of ‘making a difference through music’ not only to the beneficiaries of our charities, but also to every guest who hears us perform.</p>
+                            <a class="call-to-action" href="resources/docs/Shabbat with Kol Tov.pdf"><i class="fa fa-file" aria-hidden="true"></i>Find out more</a>
                         </div>
                     </div>
                     <div class="image-div" style="background-image: url(resources/images/misc/shul.jpg);">
@@ -148,25 +124,23 @@
                     <h1>Meet the members</h1>
                     <p>Through the years from The 4 Sons to Kol Tov the group and it's members have changed over time, scroll down to find out more about the current stellar</p>
                 </div>
-                <div class="collapsable-columns desktop-3 mobile-2">
+                <div class="collapsable-columns desktop-3 mobile-2 bg-light-3">
                     <div>
                         <div class="image-div" style="background-image: url(resources/images/members/george.jpg)"></div>
                     </div>
                     <div class="span-2">
                         <div class="padded">
                             <h2 style="margin-top: 0;">George Rosenfeld</h2>
-                            <p>Studies Russian and Arabic at Trinity College Cambridge</p>
-                            <hr class="mobile-hide">
+                            <p><b>Studies Russian and Arabic at Trinity College Cambridge</b></p>
                             <p class="mobile-hide">"Our group has developed so much over the past six years, but singing with these boys has been a consistent highlight of my week. A cappella is the ultimate team game and it creates a really special bond between us. There's no better feeling than singing as a group and hearing it all come together around you."</p>
                         </div>
                     </div>
                 </div>
-                <div class="collapsable-columns desktop-3 mobile-2">
+                <div class="collapsable-columns desktop-3 mobile-2 bg-light-3">
                     <div class="span-2">
                         <div class="padded">
                             <h2 style="margin-top: 0;">Asher Levy</h2>
-                            <p>Studies Accounting and Finance at the University of Leeds</p>
-                            <hr class="mobile-hide">
+                            <p><b>Studies Accounting and Finance at the University of Leeds</b></p>
                             <p class="mobile-hide">"I never struggled to get out of bed on a Monday morning, because I knew that at the end of the school day I would be creating music with my close friends. Singing a cappella is so rewarding – when all the harmonies come together it brings a smile to my face. But for me, the most rewarding thing is that the group is using a combined passion for singing to make a real difference to the lives of many. I want to spread the message that anyone can take something they love and use it to make the world a better place. I am seriously proud of the amount of money we have raised for charity since 2012 – the efforts of every member of ‘The Family’ is astonishing. Long may it continue!"</p>
                         </div>
                     </div>
@@ -174,25 +148,23 @@
                         <div class="image-div" style="background-image: url(resources/images/members/asher.jpg)"></div>
                     </div>
                 </div>
-                <div class="collapsable-columns desktop-3 mobile-2">
+                <div class="collapsable-columns desktop-3 mobile-2 bg-light-3">
                     <div>
                         <div class="image-div" style="background-image: url(resources/images/members/rafi.jpg)"></div>
                     </div>
                     <div class="span-2">
                         <div class="padded">
                             <h2 style="margin-top: 0;">Rafi Levy</h2>
-                            <p>Studies Computer Science at Jesus College Cambridge</p>
-                            <hr class="mobile-hide">
+                            <p><b>Studies Computer Science at Jesus College Cambridge</b></p>
                             <p class="mobile-hide">"Our group has developed so much over the past six years, but singing with these boys has been a consistent highlight of my week. A cappella is the ultimate team game and it creates a really special bond between us. There's no better feeling than singing as a group and hearing it all come together around you."</p>
                         </div>
                     </div>
                 </div>
-                <div class="collapsable-columns desktop-3 mobile-2">
+                <div class="collapsable-columns desktop-3 mobile-2 bg-light-3">
                     <div class="span-2">
                         <div class="padded">
                             <h2 style="margin-top: 0;">Gideon Caplan</h2>
-                            <p>Studies Sociology, Theology and Religious Studies at the University of Leeds</p>
-                            <hr class="mobile-hide">
+                            <p><b>Studies Sociology, Theology and Religious Studies at the University of Leeds</b></p>
                             <p class="mobile-hide">"Kol Tov has been a really enjoyable part of my life over the past few years. You can recognise my voice as the one which does most of the top notes! My confidence has improved hugely since starting and I've grown to love every performance. We’ve grown so much as individuals and as a group since I first joined and I'm very excited to see what we will accomplish together."</p>
                         </div>
                     </div>
@@ -200,15 +172,14 @@
                         <div class="image-div" style="background-image: url(resources/images/members/gideon.jpg)"></div>
                     </div>
                 </div>
-                <div class="collapsable-columns desktop-3 mobile-2">
+                <div class="collapsable-columns desktop-3 mobile-2 bg-light-3">
                     <div>
                         <div class="image-div" style="background-image: url(resources/images/members/noam.jpg)"></div>
                     </div>
                     <div class="span-2">
                         <div class="padded">
                             <h2 style="margin-top: 0;">Noam Bernstein</h2>
-                            <p>Studies Economics and Geography at the University of Leeds</p>
-                            <hr class="mobile-hide">
+                            <p><b>Studies Economics and Geography at the University of Leeds</b></p>
                             <p class="mobile-hide">"The really special thing we have in Kol Tov is that we all know each other outside of the group. This means we have very strong, personal relationships with one another, and this allows me to connect even more with our music. I'm singing with great friends every time, so I'm constantly enjoying myself. Personally, I think it adds a level to our music."</p>
                         </div>
                     </div>
@@ -243,16 +214,8 @@
                 <h1>
                     Get in touch
                 </h1>
-                <p>Use the form below to send us a message, alternatively you can email us at <a href="mailto:hello@koltovmusic.com">hello@koltovmusic.com</a>. Please limit messages to bussiness enquiries, if you would like to chat feel free to message us on Instagram or Facebook!</p>
-                <form id="contactForm" class="contact-form" action="javascript:void(0);">
-                    <p><label for="name">Name:</label></p>
-                    <input type="text" placeholder="Joe Bloggs" id="name" name="name" required>
-                    <p><label for="email">Email</label></p>
-                    <input type="email" placeholder="joebloggs@gmail.com" id="email" name="email" required>
-                    <p><label for="message">Your message:</label></p>
-                    <textarea required id="message" name="message" rows="15" style="resize: vertical;"></textarea>
-                    <button onclick="handleSubmit()" class="call-to-action">Submit</button>
-                </form>
+                <p>Do you have a business enquiry or want to get in touch with us, just click on the button below and send us an email! If you're just looking to chat feel free to message us on Instagram or Facebook.</p>
+                <a class="call-to-action" href="mailto:hello@koltovmusic.com"><i class="fa fa-envelope" aria-hidden="true"></i>Contact Us</a>
             </div>
         </div>
     </div>  

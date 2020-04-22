@@ -1,7 +1,7 @@
 :root {
     --cream-col: rgb(255, 244, 221);
     --dark-grad: linear-gradient(127deg, rgb(96, 107, 139) 0%, rgb(9, 51, 117) 100%);
-    --light-grad: linear-gradient(127deg, rgba(255,208,158,1) 0%, rgba(158,196,255,1) 100%);
+    --light-grad: linear-gradient(127deg, rgb(255, 255, 255) 0%, rgb(155, 169, 206) 100%);
     --colour-3: #BAD7F2;
     --colour-4: #F2BAC9;
     --colour-5: rgb(216, 216, 216);
