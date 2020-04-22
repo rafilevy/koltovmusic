@@ -1,12 +1,11 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
-const emailConfig = require("./config.json");
 
 const emailClient = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: emailConfig.gmailUsername,
-        pass: emailConfig.gmailPassword
+        user: process.env.GMAIL_USERNAME,
+        pass: process.env.GMAIL_PASSWORD
     }
 });
 
