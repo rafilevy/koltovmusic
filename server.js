@@ -37,4 +37,4 @@ app.post("/contact", (req, res)=> {
         res.status(400).send("Invalid params.");
     }
 });
-app.listen(80);
+app.listen(process.env.PORT || 5000);
