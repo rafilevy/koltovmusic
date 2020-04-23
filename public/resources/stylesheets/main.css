@@ -30,11 +30,39 @@ h1, h2, h3 {
 
 .header {
     background-color: #ffffff;
-    padding: 0 20px;
     min-height: 100%;
     font-family: "Roboto Condensed", sans-serif;
     text-align: center;
     position: relative;
+}
+
+.navbar {
+    font-size: 1.2rem;
+    padding: 8px;
+    flex: 1;
+}
+.navbar a:not(:last-child) {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    transition: color 0.3s ease-out;
+}
+.navbar a:not(:last-child):hover {
+    color: var(--col-primary);
+}
+.navbar a:not(:last-child)::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    left: -9%;
+    height: 2px;
+    background-color: var(--col-primary);
+    transition: width 0.3s ease-out;
+}
+.navbar a:not(:last-child):hover::after{
+    width: 120%;
 }
 
 .scroll-arrow {
@@ -84,7 +112,6 @@ h1, h2, h3 {
     justify-content: start;
     width: fit-content;
     transition: transform 0.2s ease-out;
-    margin: 10px auto;
 }
 .call-to-action > * {
     color: white;

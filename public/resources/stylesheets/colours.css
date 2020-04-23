@@ -3,6 +3,7 @@
     --dark-grad: linear-gradient(127deg, rgb(96, 107, 139) 0%, rgb(9, 51, 117) 100%);
     --light-grad: linear-gradient(127deg, rgb(255, 255, 255) 0%, rgb(155, 169, 206) 100%);
     --grey-col: rgb(99, 99, 99);
+    --col-primary: rgb(40, 136, 192);
 }
 
 .bg-light-1 {
