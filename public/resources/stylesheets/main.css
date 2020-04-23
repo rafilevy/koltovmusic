@@ -6,6 +6,11 @@ body, html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
 }
 
 .page {
@@ -44,6 +49,14 @@ h1, h2, h3 {
     font-size: 50px;
 }
 
+.footer {
+    font-size: 0.9rem;
+    padding: 8px;
+    font-family: "Roboto Condensed", sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
 /* Page padding */
 
 .padded {
@@ -54,24 +67,6 @@ h1, h2, h3 {
 }
 .padded-vertical {
     padding: 50px 0px;
-}
-
-/* Contact form */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-form > * {
-    width: 100%;
-}
-.contact-form > input, .contact-form > textarea {
-    padding: 10px;
-    width: calc(100% - 20px);
-}
-.contact-form textarea {
-    font-size: 1em;
 }
 
 /* Components */
