@@ -104,6 +104,7 @@ h1, h2, h3 {
     color: white;
     border-radius: 30px;
     padding: 5px 20px;
+    margin: 5px;
     text-decoration: none;
     user-select: none;
     display: flex;
@@ -121,7 +122,6 @@ h1, h2, h3 {
 }
 .call-to-action:hover {
     transform: scale(1.1);
-    
 }
 
 /* An image */
