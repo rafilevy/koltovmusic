@@ -37,7 +37,7 @@ h1, h2, h3 {
 }
 
 .navbar {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 8px;
     flex: 1;
 }
@@ -47,7 +47,8 @@ h1, h2, h3 {
     position: relative;
     transition: color 0.3s ease-out;
 }
-.navbar a:not(:last-child):hover {
+.navbar a:not(:last-child):hover,
+.navbar a:not(:last-child):focus {
     color: var(--col-primary);
 }
 .navbar a:not(:last-child)::after{
@@ -61,7 +62,8 @@ h1, h2, h3 {
     background-color: var(--col-primary);
     transition: width 0.3s ease-out;
 }
-.navbar a:not(:last-child):hover::after{
+.navbar a:not(:last-child):hover::after,
+.navbar a:not(:last-child):focus::after{
     width: 120%;
 }
 
@@ -88,13 +90,13 @@ h1, h2, h3 {
 /* Page padding */
 
 .padded {
-    padding: 50px;
+    padding: 2.5rem;
 }
 .padded-horizontal {
-    padding: 0 50px;
+    padding: 0 2.5rem;
 }
 .padded-vertical {
-    padding: 50px 0px;
+    padding: 2.5rem 0px;
 }
 
 /* Components */
@@ -120,7 +122,8 @@ h1, h2, h3 {
 .call-to-action > *:first-child {
     margin-right: 5px;
 }
-.call-to-action:hover {
+.call-to-action:hover,
+.call-to-action:focus {
     transform: scale(1.1);
 }
 
@@ -161,4 +164,22 @@ h1, h2, h3 {
 
 .collapsable-columns > * {
     width: 100%;
+}
+
+
+/* YouTube player classes */
+.video-container {
+    margin: auto;
+    width: min(100%, 800px);
+    padding-top: min(56.25%, 450px);
+    background-color: red;
+    position: relative;
+}
+
+.video-container > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
