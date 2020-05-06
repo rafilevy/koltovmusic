@@ -27,6 +27,10 @@
         font-size: 20px;
     }
 
+    .navbar {
+        font-size: 1.2rem;
+    }
+
     .collapsable-columns.desktop-2 > * {
         width: 50%;
     }
