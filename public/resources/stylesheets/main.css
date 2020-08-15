@@ -26,6 +26,10 @@ h1, h2, h3 {
     margin-top: 0;
 }
 
+h3 {
+    font-style: italic;
+}
+
 /* Header */
 
 .header {
@@ -33,13 +37,13 @@ h1, h2, h3 {
     min-height: 100%;
     font-family: "Roboto Condensed", sans-serif;
     text-align: center;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
     font-size: 1rem;
     padding: 8px;
-    flex: 1;
 }
 .navbar a:not(:last-child) {
     text-decoration: none;
@@ -65,6 +69,22 @@ h1, h2, h3 {
 .navbar a:not(:last-child):hover::after,
 .navbar a:not(:last-child):focus::after{
     width: 120%;
+}
+
+.header-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.live-total {
+    font-size: 3em;
+    color: goldenrod
+}
+.live-total > h2, .live-total > p {
+    margin: 0;
 }
 
 .scroll-arrow {
@@ -146,20 +166,19 @@ h1, h2, h3 {
 .vertical {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
 
 /* A collapsable column layout */
-
 .collapsable-columns {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
 }
 
 .collapsable-columns > * {
@@ -169,10 +188,8 @@ h1, h2, h3 {
 
 /* YouTube player classes */
 .video-container {
-    margin: auto;
-    width: min(100%, 800px);
+    width: min(100%, 900px);
     padding-top: min(56.25%, 450px);
-    background-color: red;
     position: relative;
 }
 
@@ -182,4 +199,27 @@ h1, h2, h3 {
     left: 0;
     right: 0;
     bottom: 0;
+}
+
+/* Hover/Focus image */
+.blur-reveal > * {
+    color: white;
+    opacity: 0;
+    backdrop-filter: none;
+    transition: all 0.2s ease-in;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+.blur-reveal:hover > *:not(.invert), blur-reveal:focus > *:not(.invert) {
+    opacity: 1;
+    backdrop-filter: blur(25px) brightness(0.7);
+}
+.blur-reveal > *.invert {
+    opacity: 1;
+}
+.blur-reveal:hover > *.invert, blur-reveal:focus > *.invert {
+    opacity: 0;
 }

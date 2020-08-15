@@ -7,9 +7,16 @@
     .mobile-hide {
         display: none;
     }
+    .desktop-hide {
+        display: inherit;
+    }
+
+    .padded-desktop {
+        padding: inherit;
+    }
     
     .image-div {
-        min-height: 200px;
+        min-height: 300px;
     }
 
     .collapsable-columns.mobile-2 > * {
@@ -31,12 +38,24 @@
         font-size: 1.2rem;
     }
 
+    .padded-desktop {
+        padding: 10px 0
+    }
+
+    .collapsable-columns.desktop-1 {
+        position: relative;
+    }
+
+    .collapsable-columns.desktop-1 > * {
+        width: 100%;
+    }
+
     .collapsable-columns.desktop-2 > * {
         width: 50%;
     }
 
     .collapsable-columns.desktop-3 > * {
-        width: 33%;
+        width: calc(100% / 3);
     }
 
     .collapsable-columns.desktop-4 > * {
@@ -44,10 +63,19 @@
     }
 
     .collapsable-columns.desktop-3 > *.span-2 {
-        width: 66%;
+        width: calc(200% / 3);
     }
 
     .mobile-hide {
-        display: inline;
+        display: inherit;
+    }
+    .desktop-hide {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 900px) {
+    body {
+        font-size: 18px;
     }
 }
