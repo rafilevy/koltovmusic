@@ -26,7 +26,6 @@ h1, h2, h3 {
 }
 
 h3 {
-
     font-style: italic;
 }
 
@@ -35,7 +34,7 @@ h3 {
 .navbar {
     position: fixed;
     width: 100%;
-    top: 0px;
+    top: 0;
     z-index: 2;
     transition: top 0.2s;
 
@@ -218,6 +217,7 @@ h3 {
 .blur-reveal {
     min-height: 25em;
     position: relative;
+    cursor: pointer;
 }
 .blur-reveal-bg {
     position: absolute;
