@@ -1,5 +1,9 @@
 /* Mobile */
 @media screen and (max-width: 900px) {
+    .body {
+        font-size: 16px;
+    }
+
     .mobile-hide {
         display: none;
     }
